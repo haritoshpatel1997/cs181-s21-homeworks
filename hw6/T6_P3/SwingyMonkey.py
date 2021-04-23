@@ -59,14 +59,14 @@ class SwingyMonkey:
 
         # Set up the screen for rendering.
         self.screen = pg.display.set_mode((self.screen_width, self.screen_height), 0, 32)
-
+        path = sys.path[0]+'\\'
         # Load external resources.
-        self.background_img = pg.image.load('res/jungle-pixel.bmp').convert()
-        self.monkey_img     = pg.image.load('res/monkey.bmp').convert_alpha()
-        self.tree_img       = pg.image.load('res/tree-pixel.bmp').convert_alpha()
+        self.background_img = pg.image.load(path+'res\\jungle-pixel.bmp').convert()
+        self.monkey_img     = pg.image.load(path+'res\\monkey.bmp').convert_alpha()
+        self.tree_img       = pg.image.load(path+'res\\tree-pixel.bmp').convert_alpha()
         if self.sound:
-            self.screech_snd    = pg.mixer.Sound('res/screech.wav')
-            self.blop_snd       = pg.mixer.Sound('res/blop.wav')
+            self.screech_snd    = pg.mixer.Sound(path+'res\\screech.wav')
+            self.blop_snd       = pg.mixer.Sound(path+'res\\blop.wav')
 
         # Set up text rendering.
         self.font = pg.font.Font(None, 36)
